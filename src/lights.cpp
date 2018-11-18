@@ -1,10 +1,8 @@
-#define DEBUG
-
 #include "lights.h"
 
 #include "common.h"
 
-LightsControl::Lights() {
+LightsControl::LightsControl() {
   patternFactory = NULL;
   pattern = NULL;
   steps = 0;

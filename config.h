@@ -9,5 +9,7 @@
 #define LED_COUNT_3 30
 #define LED_TYPE WS2812B
 #define NEXT_BUTTON_PIN 8
-#define POT_MAX 1023
-#define POT_PIN A1
+#define POT_1_MAX 1023
+#define POT_2_MAX 1023
+#define POT_1_PIN A1
+#define POT_2_PIN A2

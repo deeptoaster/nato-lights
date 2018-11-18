@@ -1,10 +1,8 @@
-#pragma once
-
 #include "pattern.h"
 
 class LightsControl {
  public:
-  Lights();
+  LightsControl();
   template<class TPattern>
   void addPattern();
   void nextPattern();
