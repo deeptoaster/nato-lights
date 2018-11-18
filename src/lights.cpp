@@ -4,13 +4,13 @@
 
 #include "common.h"
 
-Lights::Lights() {
+LightsControl::Lights() {
   patternFactory = NULL;
   pattern = NULL;
   steps = 0;
 }
 
-void Lights::nextPattern() {
+void LightsControl::nextPattern() {
   if (patternFactory) {
     if (!pattern) {
       on();
@@ -27,7 +27,7 @@ void Lights::nextPattern() {
   }
 }
 
-void Lights::off() {
+void LightsControl::off() {
 #ifdef DEBUG
   Serial.println("[Lights] Turning off.");
 #endif
@@ -41,7 +41,7 @@ void Lights::off() {
   }
 }
 
-void Lights::on() {
+void LightsControl::on() {
 #ifdef DEBUG
   Serial.println("[Lights] Turning on.");
 #endif
@@ -50,7 +50,7 @@ void Lights::on() {
   pattern->init();
 }
 
-void Lights::previousPattern() {
+void LightsControl::previousPattern() {
   if (patternFactory) {
     if (!pattern) {
       on();
@@ -67,7 +67,7 @@ void Lights::previousPattern() {
   }
 }
 
-void Lights::step() {
+void LightsControl::step() {
   if (pattern) {
     if (!steps) {
       steps = pattern->step();

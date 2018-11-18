@@ -2,7 +2,7 @@
 
 #include "pattern.h"
 
-class Lights {
+class LightsControl {
  public:
   Lights();
   template<class TPattern>
@@ -19,7 +19,7 @@ class Lights {
 };
 
 template<class TPattern>
-void Lights::addPattern() {
+void LightsControl::addPattern() {
   Factory *newFactory = (Factory *)new PatternFactory<TPattern>();
 
   if (!patternFactory) {
