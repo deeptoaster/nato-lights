@@ -1,10 +1,11 @@
 #include "../pattern.h"
 
-class PatternColors : public Pattern {
+class PatternFire : public Pattern {
  public:
   void init();
   int step();
  private:
   int i;
-  int offset;
+  int j;
+  int scale;
 };
