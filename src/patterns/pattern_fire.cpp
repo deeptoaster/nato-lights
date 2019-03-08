@@ -11,13 +11,13 @@ void PatternFire::init() {
 }
 
 unsigned char PatternFire::step() {
-  scale = map(Hardware.getPot1Value(), 0, POT_1_MAX, 0, random(FIRE_SCALE_MIN, FIRE_SCALE_MAX));
+  scale = map(Hardware.getPot1Value(), 0, POT_1_MAX, 0, random8(FIRE_SCALE_MIN, FIRE_SCALE_MAX));
 
   for (i = 0; i < LED_COUNT; i++) {
-    j = random(2) ? LED_COUNT - i - 1 : i;
+    j = random8(2) ? LED_COUNT - i - 1 : i;
     leds[j].r = qadd8((leds[(j - 2 + LED_COUNT) % LED_COUNT].r + leds[(j - 1 + LED_COUNT) % LED_COUNT].r * 2 + leds[j].r + leds[(j + 1) % LED_COUNT].r * 2 + leds[(j + 2) % LED_COUNT].r) * 4 / 29, scale / FIRE_SCALE_MIN);
 
-    if (!random(FIRE_SPAWN_FREQUENCY)) {
+    if (!random8(FIRE_SPAWN_FREQUENCY)) {
       leds[j].r = qadd8(leds[j].r, scale);
     }
 

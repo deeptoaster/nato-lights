@@ -17,5 +17,5 @@ unsigned char PatternColors::step() {
     offset -= LED_COUNT;
   }
 
-  return 10;
+  return 5;
 }

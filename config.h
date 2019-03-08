@@ -1,4 +1,4 @@
-#define DEBUG
+//~ #define DEBUG
 
 #define BUTTON_DEBOUNCE 50
 #define LED_DUPLICATION 2

@@ -3,6 +3,7 @@
 #include "src/pattern.h"
 #include "src/patterns/pattern_colors.h"
 #include "src/patterns/pattern_fire.h"
+#include "src/patterns/pattern_trains.h"
 
 unsigned long debounce;
 CRGB leds[LED_BUFFER_SIZE];
@@ -10,11 +11,11 @@ LightsControl Lights;
 HardwareControl Hardware;
 
 void show(unsigned char strip, unsigned short offset, unsigned short count) {
-  for (short i = LED_COUNT - 1; i >= offset + count; i--) {
+  for (signed short i = LED_COUNT - 1; i >= offset + count; i--) {
     leds[i + LED_BUFFER_PADDING] = leds[i];
   }
 
-  for (short i = count - 1; i >= 0; i--) {
+  for (signed short i = count - 1; i >= 0; i--) {
     for (unsigned char j = 0; j < LED_DUPLICATION; j++) {
       leds[i * LED_DUPLICATION + j + offset] = leds[i + offset];
     }
@@ -42,6 +43,7 @@ void setup() {
   Lights = LightsControl();
   Lights.addPattern<PatternColors>();
   Lights.addPattern<PatternFire>();
+  Lights.addPattern<PatternTrains>();
   Hardware = HardwareControl();
 }
 
