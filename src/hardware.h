@@ -4,10 +4,10 @@ class HardwareControl {
  public:
   HardwareControl();
   bool getNextButtonPressed();
-  int getPot1Value();
-  int getPot2Value();
+  unsigned short getPot1Value();
+  unsigned short getPot2Value();
  private:
-  int nextButtonState;
-  int nextButtonStateDebounced;
+  unsigned char nextButtonState;
+  unsigned char nextButtonStateDebounced;
   unsigned long debounce;
 };

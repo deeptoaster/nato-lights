@@ -13,7 +13,7 @@ class LightsControl {
  private:
   Pattern *pattern;
   Factory *patternFactory;
-  int steps;
+  unsigned char steps;
 };
 
 template<class TPattern>

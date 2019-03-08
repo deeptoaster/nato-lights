@@ -1,10 +1,12 @@
 #include "../pattern.h"
 
+#define COLORS_SPEED_MAX (LED_COUNT / 16)
+
 class PatternColors : public Pattern {
  public:
   void init();
-  int step();
+  unsigned char step();
  private:
-  int i;
-  int offset;
+  unsigned short i;
+  unsigned short offset;
 };

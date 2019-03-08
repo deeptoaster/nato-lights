@@ -34,7 +34,7 @@ void LightsControl::off() {
   pattern = NULL;
   steps = 0;
 
-  for (int i = 0; i < LED_COUNT; i++) {
+  for (unsigned short i = 0; i < LED_COUNT; i++) {
     leds[i] = CRGB::Black;
   }
 }

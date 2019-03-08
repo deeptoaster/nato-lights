@@ -3,11 +3,11 @@
 class Pattern {
  public:
   virtual void init() {}
-  virtual int step() {}
+  virtual unsigned char step() {}
   virtual ~Pattern() {}
 };
 
-class Factory{
+class Factory {
  public:
   virtual Pattern *getInstance() = 0;
   Factory *next;

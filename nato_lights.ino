@@ -9,24 +9,24 @@ CRGB leds[LED_BUFFER_SIZE];
 LightsControl Lights;
 HardwareControl Hardware;
 
-void show(int i, int offset, int count) {
-  for (int i = LED_COUNT - 1; i >= offset + count; i--) {
+void show(unsigned char strip, unsigned short offset, unsigned short count) {
+  for (short i = LED_COUNT - 1; i >= offset + count; i--) {
     leds[i + LED_BUFFER_PADDING] = leds[i];
   }
 
-  for (int i = count - 1; i >= 0; i--) {
-    for (int j = 0; j < LED_DUPLICATION; j++) {
+  for (short i = count - 1; i >= 0; i--) {
+    for (unsigned char j = 0; j < LED_DUPLICATION; j++) {
       leds[i * LED_DUPLICATION + j + offset] = leds[i + offset];
     }
   }
 
-  FastLED[i].showLeds();
+  FastLED[strip].showLeds();
 
-  for (int i = 0; i < count; i++) {
+  for (unsigned short i = 0; i < count; i++) {
     leds[i + offset] = leds[i * LED_DUPLICATION + offset];
   }
 
-  for (int i = offset + count; i < LED_COUNT; i++) {
+  for (unsigned short i = offset + count; i < LED_COUNT; i++) {
     leds[i] = leds[i + LED_BUFFER_PADDING];
   }
 }

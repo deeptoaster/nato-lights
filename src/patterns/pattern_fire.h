@@ -1,11 +1,16 @@
 #include "../pattern.h"
 
+#define FIRE_G_R_OFFSET 48
+#define FIRE_SCALE_MIN 64
+#define FIRE_SCALE_MAX 128
+#define FIRE_SPAWN_FREQUENCY 128
+
 class PatternFire : public Pattern {
  public:
   void init();
-  int step();
+  unsigned char step();
  private:
-  int i;
-  int j;
-  int scale;
+  unsigned short i;
+  unsigned short j;
+  unsigned char scale;
 };
