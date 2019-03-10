@@ -16,7 +16,7 @@ void LightsControl::nextPattern() {
       patternFactory = patternFactory->next;
 
 #ifdef DEBUG
-      Serial.print("[Lights] Next pattern: ");
+      Serial.print(F("[Lights] Next pattern: "));
       Serial.println((int)patternFactory);
 #endif
 
@@ -27,7 +27,7 @@ void LightsControl::nextPattern() {
 
 void LightsControl::off() {
 #ifdef DEBUG
-  Serial.println("[Lights] Turning off.");
+  Serial.println(F("[Lights] Turning off."));
 #endif
 
   delete pattern;
@@ -41,7 +41,7 @@ void LightsControl::off() {
 
 void LightsControl::on() {
 #ifdef DEBUG
-  Serial.println("[Lights] Turning on.");
+  Serial.println(F("[Lights] Turning on."));
 #endif
 
   pattern = patternFactory->getInstance();
@@ -56,7 +56,7 @@ void LightsControl::previousPattern() {
       patternFactory = patternFactory->previous;
 
 #ifdef DEBUG
-      Serial.print("[Lights] Previous pattern: ");
+      Serial.print(F("[Lights] Previous pattern: "));
       Serial.println((int)patternFactory);
 #endif
 

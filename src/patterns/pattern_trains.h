@@ -18,10 +18,6 @@ class PatternTrains : public Pattern {
   void init();
   unsigned char step();
  private:
-  unsigned char count;
   unsigned char cycle;
-  unsigned short i;
-  unsigned char j;
-  unsigned short k;
   struct train trains[TRAINS_COUNT_MAX];
 };

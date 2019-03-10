@@ -7,7 +7,7 @@ void PatternColors::init() {
 }
 
 unsigned char PatternColors::step() {
-  for (i = 0; i < LED_COUNT; i++) {
+  for (unsigned short i = 0; i < LED_COUNT; i++) {
     leds[i] = CHSV(map(i + offset, 0, LED_COUNT, 0, 255), 255, 255);
   }
 

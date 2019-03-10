@@ -3,7 +3,7 @@
 #include "../common.h"
 
 void PatternTrains::init() {
-  for (i = 0; i < TRAINS_COUNT_MAX; i++) {
+  for (unsigned short i = 0; i < TRAINS_COUNT_MAX; i++) {
     trains[i].sign = random8(2);
     trains[i].acceleration = random8(2) ? -2 : 1;
     trains[i].speed = random8(0, TRAINS_SPEED_MAX);
@@ -14,15 +14,15 @@ void PatternTrains::init() {
 }
 
 unsigned char PatternTrains::step() {
-  count = map(Hardware.getPot1Value(), 0, POT_1_MAX + 1, 1, TRAINS_COUNT_MAX + 1);
+  unsigned char count = map(Hardware.getPot1Value(), 0, POT_1_MAX + 1, 1, TRAINS_COUNT_MAX + 1);
 
-  for (i = 0; i < LED_COUNT; i++) {
+  for (unsigned short i = 0; i < LED_COUNT; i++) {
     leds[i] = CRGB::Black;
   }
 
-  for (i = 0; i < count; i++) {
-    for (j = 0; j <= trains[i].speed * 4; j++) {
-      k = ((signed short)trains[i].position - j * (trains[i].sign ? -1 : 1) + LED_COUNT) % LED_COUNT;
+  for (unsigned short i = 0; i < count; i++) {
+    for (unsigned char j = 0; j <= trains[i].speed * 4; j++) {
+      unsigned short k = ((signed short)trains[i].position - j * (trains[i].sign ? -1 : 1) + LED_COUNT) % LED_COUNT;
       leds[k] += CHSV(map(i, 0, TRAINS_COUNT_MAX, 0, 255), 255, map(j, 0, trains[i].speed * 4, 255, 0));
       leds[k].r /= 2;
       leds[k].g /= 2;

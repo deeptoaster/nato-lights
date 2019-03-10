@@ -13,7 +13,7 @@ bool HardwareControl::getNextButtonPressed() {
 
   if (next_button_read != nextButtonState) {
 #ifdef DEBUG
-    Serial.print("[Hardware] Button state: ");
+    Serial.print(F("[Hardware] Button state: "));
     Serial.println(next_button_read);
 #endif
 
@@ -38,7 +38,7 @@ unsigned short HardwareControl::getPot1Value() {
   unsigned short value = analogRead(POT_1_PIN);
 
 #ifdef DEBUG
-  Serial.print("[Hardware] Potentiometer 1 value: ");
+  Serial.print(F("[Hardware] Potentiometer 1 value: "));
   Serial.println(value);
 #endif
 
@@ -49,7 +49,7 @@ unsigned short HardwareControl::getPot2Value() {
   unsigned short value = analogRead(POT_2_PIN);
 
 #ifdef DEBUG
-  Serial.print("[Hardware] Potentiometer 2 value: ");
+  Serial.print(F("[Hardware] Potentiometer 2 value: "));
   Serial.println(value);
 #endif
 

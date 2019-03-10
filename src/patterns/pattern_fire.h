@@ -9,8 +9,4 @@ class PatternFire : public Pattern {
  public:
   void init();
   unsigned char step();
- private:
-  unsigned short i;
-  unsigned short j;
-  unsigned char scale;
 };

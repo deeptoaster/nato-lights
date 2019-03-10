@@ -7,6 +7,5 @@ class PatternColors : public Pattern {
   void init();
   unsigned char step();
  private:
-  unsigned short i;
   unsigned short offset;
 };
