@@ -6,7 +6,7 @@
 #define LED_PIN_2 5
 #define LED_PIN_3 6
 #define LED_COUNT_1 90
-#define LED_COUNT_2 88
+#define LED_COUNT_2 73
 #define LED_COUNT_3 90
 #define LED_TYPE NEOPIXEL
 #define NEXT_BUTTON_PIN 4

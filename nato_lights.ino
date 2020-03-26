@@ -4,6 +4,7 @@
 #include "src/patterns/pattern_colors.h"
 #include "src/patterns/pattern_fire.h"
 #include "src/patterns/pattern_trains.h"
+#include "src/patterns/pattern_white.h"
 
 unsigned long debounce;
 CRGB leds[LED_BUFFER_SIZE];
@@ -41,6 +42,7 @@ void setup() {
   FastLED.addLeds<LED_TYPE, LED_PIN_2>(leds, LED_OFFSET_2, LED_COUNT_2 * LED_DUPLICATION);
   FastLED.addLeds<LED_TYPE, LED_PIN_3>(leds, LED_OFFSET_3, LED_COUNT_3 * LED_DUPLICATION);
   Lights = LightsControl();
+  Lights.addPattern<PatternWhite>();
   Lights.addPattern<PatternColors>();
   Lights.addPattern<PatternFire>();
   Lights.addPattern<PatternTrains>();
