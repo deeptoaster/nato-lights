@@ -62,9 +62,15 @@ My reference design consists of the following components:
 - [individually addressable ws2812b WS2812 RGB 5050 LED Strip Smart Full color
   Pixel IC Ditigal waterproof tape light DC5V 1m/4m/5m (1m 30led ip30, white
   PCB)](https://www.aliexpress.us/item/2251832609237715.html) &times; 20
+- [12 GAUGE WIRE RED & BLACK POWER GROUND 100 FT EACH PRIMARY STRANDED COPPER
+  CLAD](https://www.amazon.com/gp/product/B01C7O82LU/) &times; 1
+- [ALITOVE 5V 60A 300W Power Supply Transformer Adapter Converter AC110V/220V
+  to DC 5V 60amp LED Driver for WS2812B WS2811 WS2801 APA102 LED Strip Pixel
+  Light CCTV Camera Security
+  System](https://www.amazon.com/gp/product/B06XK3X3PW/) &times; 1
 - Arduino Uno &times; 1
 
-**TODO: document power supply and wiring and add circuit diagram**
+**TODO: add circuit diagram**
 
 ### Software
 
