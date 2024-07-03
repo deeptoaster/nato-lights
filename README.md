@@ -68,9 +68,29 @@ My reference design consists of the following components:
   to DC 5V 60amp LED Driver for WS2812B WS2811 WS2801 APA102 LED Strip Pixel
   Light CCTV Camera Security
   System](https://www.amazon.com/gp/product/B06XK3X3PW/) &times; 1
+- [Proto Advantage Solder Breadboard (10 row 5
+  column)](http://www.proto-advantage.com/store/product_info.php?products_id=200004)
+  &times; 1
+- [SparkFun Electronics Tactile
+  Button](https://www.sparkfun.com/products/10302) &times; 1
+- [TT Electronics P160KNP Panel
+  Pot](https://www.ttelectronics.com/products/passive-components/potentiometers/p160knp/)
+  &times; 1
 - Arduino Uno &times; 1
 
-**TODO: add circuit diagram**
+I used one potentiometer even though the library supports two out of the box.
+
+| Diagram                                                                                         | Front                                                                                        | Back                                                                                        |
+| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| ![](https://raw.githubusercontent.com/deeptoaster/nato-lights/master/images/nato-lights_bb.png) | ![](https://raw.githubusercontent.com/deeptoaster/nato-lights/master/images/board_front.png) | ![](https://raw.githubusercontent.com/deeptoaster/nato-lights/master/images/board_back.png) |
+
+In addition, I 3D-printed a wall-mounted encasement for the complete control
+box. The SolidWorks assembly and STL files are available in the _encasement_
+directory.
+
+| Front                                                                                             | Side                                                                                             |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| ![](https://raw.githubusercontent.com/deeptoaster/nato-lights/master/images/encasement_front.png) | ![](https://raw.githubusercontent.com/deeptoaster/nato-lights/master/images/encasement_side.png) |
 
 ### Software
 
